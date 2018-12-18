@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="./assets/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="./assets/style.css">
+		<link rel="stylesheet" type="text/css" href="./assets/sweet-alert.css">
+		<title>TRON GARDEN - TRON Farming Game - let's grow and sell crypto vegetables.</title>
+	</head>
+	<body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="https://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+		<div class="cloud">
+			<div class="header">		
+				<div class="row text-center">
+					<div class="container header__title">
+						<div class="header__sub-title text-center">
+							<div class="text-center" style="font-size: 1.5em">
+								&nbsp;<span class="logo_txt">TRON</span>
+								<img class="header__scarecrow header__img" src="./assets/scarecrow_head.png">
+								<span class="logo_txt">GARDEN</span>
+							</div>				
+						</div>
+						<div class="header__sub-title text-center">
+							<div class="col-xs-4 text-right" style="position: relative; top:-20px;">
+								<a class="blog-link" href="/#About">About</a> 
+							</div>
+							<div class="col-xs-4 text-center" style="font-size: 0.8em">
+								<a class="blog-link" href="" target="_blank">Contract<span class="hidden-xs"></span></a>  
+							</div>
+							<div class="col-xs-4 text-left" style="position: relative; top:-20px;">
+								<img class="header__img" src="./assets/en.png" title="ENG">
+								<a href="javascript:lang(&quot;ru&quot;)"><img class="header__img lang" src="./assets/ru.png" title="РУС"></a>
+								<a href="javascript:lang(&quot;cn&quot;)"><img class="header__img lang" src="./assets/cn.png" title="中国"></a><br>
+
+								<!--a class="blog-link" href="" target="_blank">Discord</a-->
+							</div>			
+						</div>
+
+					</div>	
+					<div class="container header__title" style="margin-top:10px;">
+						<div class="col-xs-3" style="position: relative; top:-20px;">
+							<a class="blog-link" href="/#Watermelons"><img class="header__img" src="./assets/watermelon_logo.png"><br>
+								<span class="hidden-xs hidden-sm">Watermelons:</span> <b class="vegetable1">0</b></a>
+						</div>
+						<div class="col-xs-3">
+							<a class="blog-link" href="/#Tomatoes"><img class="header__img" src="./assets/tomato_logo.png"><br>
+								<span class="hidden-xs hidden-sm">Tomatoes:</span> <b class="vegetable2">0</b></a>
+
+						</div>
+						<div class="col-xs-3">
+							<a class="blog-link" href="/#Corn"><img class="header__img" src="./assets/corn_logo.png"><br>
+								<span class="hidden-xs hidden-sm">Corn:</span> <b class="vegetable3">0</b></a>
+
+						</div>
+						<div class="col-xs-3" style="position: relative; top:-20px;">
+							<a class="blog-link" href="/#Beets"><img class="header__img" src="./assets/beet_logo.png"><br>
+								<span class="hidden-xs hidden-sm">Beets:</span> <b class="vegetable4">0</b></a>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="x3 cloud__front"></div>
+			<div class="x2 cloud__back"></div>
+			<div class="eth"></div>
+			<div class="x1 cloud__main"></div>               
+		</div>
+
+		<div class="space"></div>
+		<div class="grass"></div>
+		<div class="stars"></div>
+
+
+		<div class="eth_wait" style="display: none;"></div>
+
+		<div class="main-container" style="margin:0 auto; max-width:1300px; min-width:320px;overflow-x:hidden;">	
+			<div>
+				<div class="light-stripes"></div> 
+				<div class="space2"></div>
+
+			</div>
+			<div class="ground">
+				<div class="first-part">
+					<div class="first-hill"></div>
+					<div class="first-trees"></div>
+					<div class="mountain"></div>
+				</div>
+				<div class="last-part">
+					<div class="last-hill">
+						<div class="house">
+							<div class="larg-bubble"></div>
+							<div class="small-bubble"></div>                
+						</div>
+						<div class="balloon"></div>
+					</div>
+					<div class="last-trees"></div>        
+					<div class="yellow-lighting"></div>
+				</div>
+				<div class="grace"></div>
+			</div>
+			<div id="fields" style="position: absolute; width:100%; top:550px; left:0">	<div class="container top mb150" id="post_sign">
+					<div style="color:#fff; z-index:9990; line-height:27px; text-align:center; position:relative; width:300px; height: 210px; display:table; margin: 0 auto; background:url(&quot;images/signpost.png&quot;) no-repeat center;">
+						<br>
+						Enter the address<br>
+						of your wallet<br>
+						<input id="thewallet" class="extra_field_price" placeholder="" type="text" value="" style="width:250px; color:#000;" onkeyup="checkwallet()">
+					</div>
+					<div class="text-center">
+						<br><br><br><span class="yellow">HOW TO PLAY</span><br><br>
+						<span class="yellow">ATTENTION!</span> All new farmers will get only ONE RANDOM kind of vegetable, it can't be changed.<br><br>
+						If you a new farmer - click FREE button to <span class="yellow">getting FREE</span> acres.<br><br>
+						If you have any acres - click Sell button <span class="yellow">for selling</span> all your grown vegetables.<br><br>
+						If you want <span class="yellow">to buy</span> acres - send from TRON wallet to the address of the smart contract any amount from 1 TRX<br><br>
+						If you want <span class="yellow">to reinvest</span> all grown vegetables - click Change button<br><br>
+						<span class="yellow">COPY the smart contract address:</span><br><br>
+						<div class="row">
+							<div class="col-md-4"></div>
+							<div class="col-md-4">
+								<input class="extra_field_price" style="width:100%; color:#000; background:#ffff00; padding-left:5px;padding-right:5px;" value="TQntkYZmK2yssHT87Vj1xCWoZKF7Rj8WSt" readonly="">
+								<br><br>See at the <a class="yellow" href="https://tronscan.org/#/contract/TQntkYZmK2yssHT87Vj1xCWoZKF7Rj8WSt" target="_blank">TronScan</a>
+							</div>
+							<div class="col-md-4"></div>
+						</div>
+					</div>
+
+				</div>
+
+
+
+				<div class="container top mb150 f1" id="Watermelons">
+					<div class="row">
+						<div class="col-md-3 text-center top"><img src="./assets/ground_watermelon.png"></div>
+						<div id="info_field1" class="col-md-6 text-center top sign green-bg shade">
+							<canvas id="canvas" class="canvas" width="547" height="198"></canvas>
+							<div class="vegetableInfo">
+								<div class="" id="your_field1" style="margin-top:5px;">Watermelons field <b class="yellow" id="field1">0</b> acres<br></div>
+								<div class="hide_elem" id="free_field1" style="display: block;">
+									You can get 
+									<button class="blue-button" onclick="getFreeAcres()">free <b id="free1">0</b> acres</button>
+									<br>
+								</div>
+								You can 
+								<button class="blue-button" onclick="buy('1')">buy <span id="extra_field_buy1">0</span> acres</button>  
+								for <input id="extra_field_price1" class="extra_field_price" type="text" value="100" style="width:70px; color:#000" onkeyup="calculate_extra_field('1')"> TRX
+								<br><br>Watermelons grown: <b class="vegetable1">0</b>
+								<br><button class="red-button" onclick="sell()">Sell for <span id="vegetable_price1">0</span> TRX</button>
+								&nbsp; <button class="blue-button" onclick="invest()">Change for <span class="vegetable1">0</span> acres</button>
+							</div>
+						</div>
+						<div class="col-md-3 text-center top"><img src="./assets/ground_watermelon.png"></div>
+					</div>
+					<div class="row" style="position: relative">
+						<div class="hidden-xs hidden-sm col-md-offset-4 col-md-4 top text-center" style="position: absolute; top:-255px; z-index:29">
+							<img src="./assets/scarecrow.png" width="200px">
+						</div>
+
+					</div>
+					<div class="row hidden-xs hidden-sm">
+						<div class="col-md-2"></div>
+						<div class="col-md-4 text-center top"><img src="./assets/ground_watermelon.png"></div>
+						<div class="col-md-4 text-center top"><img src="./assets/ground_watermelon.png"></div>
+						<div class="col-md-2"></div>
+					</div>
+
+					<div class="col-lg-12 before-start hide_elem"></div>
+
+					<div class="col-lg-12 error-bar no-account hide_elem" style="display: none;">
+						Please enter the address of your wallet on the <a href="/#post_sign">WOODEN SIGN</a>
+					</div>	
+				</div>
+
+				<div class="container top mb150 f2" id="Tomatoes">
+					<div class="row">
+						<div class="col-md-3 text-center top"><img src="./assets/ground_tomato.png"></div>
+						<div id="info_field2" class="col-md-6 text-center top sign red-bg shade">
+							<canvas id="canvas2" class="canvas" width="547" height="155"></canvas>
+							<div class="vegetableInfo">
+								<div class="" id="your_field2" style="margin-top:5px;">Tomatoes field <b class="yellow" id="field2">0</b> acres<br></div>
+								<div class="hide_elem" id="free_field2" style="display: block;">You can get <button class="blue-button" onclick="getFreeAcres()">free <b id="free2">0</b> acres</button><br></div>
+								You can <button class="blue-button" onclick="buy('2')">buy <span id="extra_field_buy2">0</span> acres</button>  for <input id="extra_field_price2" class="extra_field_price" type="text" value="100" style="width:70px; color:#000" onkeyup="calculate_extra_field('2')"> TRX
+								<br><br>Tomatoes grown: <b class="vegetable2">0</b>
+								<br><button class="red-button" onclick="sell()">Sell for <span id="vegetable_price2">0</span> TRX</button>
+								&nbsp; <button class="blue-button" onclick="invest()">Change for <span class="vegetable2">0</span> acres</button>
+							</div>
+						</div>
+						<div class="col-md-3 text-center top"><img src="./assets/ground_tomato.png"></div>
+					</div>
+					<div class="row" style="position: relative">
+						<div class="hidden-xs hidden-sm col-md-offset-4 col-md-4 top text-center" style="position: absolute; top:-255px; z-index:29">
+							<img src="./assets/scarecrow.png" width="200px">
+						</div>
+
+					</div>
+					<div class="row hidden-xs hidden-sm">
+						<div class="col-md-2"></div>
+						<div class="col-md-4 text-center top"><img src="./assets/ground_tomato.png"></div>
+						<div class="col-md-4 text-center top"><img src="./assets/ground_tomato.png"></div>
+						<div class="col-md-2"></div>
+					</div>
+
+					<div class="col-lg-12 before-start hide_elem"></div>
+
+					<div class="col-lg-12 error-bar no-account hide_elem" style="display: none;">
+						Please enter the address of your wallet on the <a href="/#post_sign">WOODEN SIGN</a>
+					</div>	
+				</div>
+
+				<div class="container top mb150 f3" id="Corn">
+					<div class="row">
+						<div class="col-md-3 text-center top"><img src="./assets/ground_corn.png"></div>
+						<div id="info_field3" class="col-md-6 text-center top sign orange-bg shade">
+							<canvas id="canvas3" class="canvas" width="547" height="155"></canvas>
+							<div class="vegetableInfo">
+								<div class="" id="your_field3" style="margin-top:5px;">Corn field <b class="yellow" id="field3">0</b> acres<br></div>
+								<div class="hide_elem" id="free_field3" style="display: block;">You can get <button class="blue-button" onclick="getFreeAcres()">free <b id="free3">0</b> acres</button><br></div>
+								You can <button class="blue-button" onclick="buy('3')">buy <span id="extra_field_buy3">0</span> acres</button>  for <input id="extra_field_price3" class="extra_field_price" type="text" value="100" style="width:70px; color:#000" onkeyup="calculate_extra_field('3')"> TRX
+								<br><br>Corn grown: <b class="vegetable3">0</b>
+								<br><button class="red-button" onclick="sell()">Sell for <span id="vegetable_price3">0</span> TRX</button>
+								&nbsp; <button class="blue-button" onclick="invest()">Change for <span class="vegetable3">0</span> acres</button>
+							</div>
+						</div>
+						<div class="col-md-3 text-center top"><img src="./assets/ground_corn.png"></div>
+					</div>
+					<div class="row" style="position: relative">
+						<div class="hidden-xs hidden-sm col-md-offset-4 col-md-4 top text-center" style="position: absolute; top:-255px; z-index:29">
+							<img src="./assets/scarecrow.png" width="200px">
+						</div>
+
+					</div>
+					<div class="row hidden-xs hidden-sm">
+						<div class="col-md-2"></div>
+						<div class="col-md-4 text-center top"><img src="./assets/ground_corn.png"></div>
+						<div class="col-md-4 text-center top"><img src="./assets/ground_corn.png"></div>
+						<div class="col-md-2"></div>
+					</div>
+
+					<div class="col-lg-12 before-start hide_elem"></div>
+
+					<div class="col-lg-12 error-bar no-account hide_elem" style="display: none;">
+						Please enter the address of your wallet on the <a href="/#post_sign">WOODEN SIGN</a>
+					</div>	
+				</div>
+
+				<div class="container top mb150 f4" id="Beets">
+					<div class="row">
+						<div class="col-md-3 text-center top"><img src="./assets/ground_beet.png"></div>
+						<div id="info_field4" class="col-md-6 text-center top sign magenta-bg shade">
+							<canvas id="canvas4" class="canvas" width="547" height="155"></canvas>
+							<div class="vegetableInfo">
+								<div class="" id="your_field4" style="margin-top:5px;">Beets field <b class="yellow" id="field4">0</b> acres<br></div>
+								<div class="hide_elem" id="free_field4" style="display: block;">You can get <button class="blue-button" onclick="getFreeAcres()">free <b id="free4">0</b> acres</button><br></div>
+								You can <button class="blue-button" onclick="buy('4')">buy <span id="extra_field_buy4">0</span> acres</button>  for <input id="extra_field_price4" class="extra_field_price" type="text" value="100" style="width:70px; color:#000" onkeyup="calculate_extra_field('4')"> TRX
+								<br><br>Beets grown: <b class="vegetable4">0</b>
+								<br><button class="red-button" onclick="sell()">Sell for <span id="vegetable_price4">0</span> TRX</button>
+								&nbsp; <button class="blue-button" onclick="invest()">Change for <span class="vegetable4">0</span> acres</button>
+							</div>
+						</div>
+						<div class="col-md-3 text-center top"><img src="./assets/ground_beet.png"></div>
+					</div>
+					<div class="row" style="position: relative">
+						<div class="hidden-xs hidden-sm col-md-offset-4 col-md-4 top text-center" style="position: absolute; top:-255px; z-index:29">
+							<img src="./assets/scarecrow.png" width="200px">
+						</div>
+
+					</div>
+					<div class="row hidden-xs hidden-sm">
+						<div class="col-md-2"></div>
+						<div class="col-md-4 text-center top"><img src="./assets/ground_beet.png"></div>
+						<div class="col-md-4 text-center top"><img src="./assets/ground_beet.png"></div>
+						<div class="col-md-2"></div>
+					</div>
+
+					<div class="col-lg-12 before-start hide_elem"></div>
+
+					<div class="col-lg-12 error-bar no-account hide_elem" style="display: none;">
+						Please enter the address of your wallet on the <a href="/#post_sign">WOODEN SIGN</a>
+					</div>	
+				</div>
+
+
+				<div id="Market_values" class="container text-center;">
+					<table style="margin: 0 auto 150px auto;">
+						<tbody><tr><th class="yellow">Vegetables</th><th class="yellow">Market value</th></tr>
+							<tr><td><span id="marketValue1">0</span> watermelons</td><td class="text-right">= 1 TRX</td></tr>
+							<tr><td><span id="marketValue2">0</span> tomatoes</td><td class="text-right">= 1 TRX</td></tr>
+							<tr><td><span id="marketValue3">0</span> corn</td><td class="text-right">= 1 TRX</td></tr>
+							<tr><td><span id="marketValue4">0</span> beets</td><td class="text-right">= 1 TRX</td></tr>
+							<tr><td colspan="2" style="border-bottom:0;font-size:0.6em">*<br>1M = 1 000 000<br>1B = 1 000 000 000<br>1T = 1 000 000 000 000</td></tr>
+							<tr>
+								<td colspan="2" style="border-bottom:0;font-size:1em;text-align:center"><br><br>
+								</td>
+							</tr>
+						</tbody></table>
+
+				</div>
+
+				<div class="container" id="About">	
+					<h2 class="yellow">Welcome to Tron Garden!</h2>
+					<br> Here you can earn TRON, growing one from four kinds of vegetables.
+					<br><br>
+					You will get random kind of vegetable for growing with the first transaction.
+					<br><br>
+					One acre of garden field gives one vegetable per day. The more acres you have, the more vegetables they give.<br><br>
+					Attention! Market value of each vegetable will be different. Less grown vegetables will be more expensive.<br><br>
+					Also market value depends on contract balance, number of all bought acres and number of all sold vegetables.
+					<br><br>
+
+				</div>	
+				<div class="container text-right">
+					<h2 class="yellow">Referrals!</h2><br> Earn 5% the number of all TRON by anyone who will buy garden fields with your wallet address <br><br>
+				</div>
+				<div class="container">	
+					<h2 class="yellow">HOW TO PLAY!</h2>
+					<br><br>Minimum invest amount for fields buying is 1 TRX.
+					<br><br>Admin commisions: 5% for buying arces + 5% for selling vegetables
+					<br><br>
+				</div>	
+
+				<div class="container" style="margin-top:50px;color:#a5d17c;font-size:0.8em">
+					<div class="col-sm-4 hidden-xs text-right">
+						<img src="./assets/shove_l.png">
+					</div>	
+					<div class="col-sm-4 text-center">
+						<a href="https://t.me/joinchat/JD-PWBYBtRTnl7mEu9rAvQ" target="_blank">
+							<span style="color:#fff">Telegramm: @TronGarden_en</span>
+							<br>
+							<img src="./assets/telegram.png" width="50px" title="Chat">
+						</a>
+						<br><br>
+						TRON GARDEN © 2018
+					</div>	
+					<div class="col-sm-4 hidden-xs text-left">
+						<img src="./assets/shove_r.png">
+					</div>
+				</div>	
+			</div>
+			<script src="./assets/jquery.min.js"></script>
+			<script src="./assets/sweet-alert.js"></script>
+			<script src="./assets/Participles.js"></script>
+			<script src="./assets/contract_run.js"></script>
+		</div>
+		<div>
+			<div class="sweet-overlay" tabindex="-1">
+				
+			</div>
+			<div class="sweet-alert" tabindex="-1">
+				<div class="icon error">
+					<span class="x-mark">
+						<span class="line left"></span>
+						<span class="line right"></span>
+					</span>
+				</div>
+				<div class="icon warning"> 
+					<span class="body"></span> 
+					<span class="dot"></span> 
+				</div> 
+				<div class="icon info"></div> 
+				<div class="icon success"> 
+					<span class="line tip"></span> 
+					<span class="line long"></span> 
+					<div class="placeholder"></div> 
+					<div class="fix"></div> 
+				</div> 
+				<div class="icon custom"></div> 
+				<h2>Title</h2>
+				<p>Text</p>
+				<button class="cancel" tabindex="2">Cancel</button>
+				<button class="confirm" tabindex="1">OK</button>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function getCookie(name) {
+				var dc = document.cookie;
+				var prefix = name + "=";
+				var begin = dc.indexOf("; " + prefix);
+
+				if (begin == -1) {
+				  begin = dc.indexOf(prefix);
+				  if (begin != 0) return null;
+				}
+				else
+				{
+					begin += 2;
+					var end = document.cookie.indexOf(";", begin);
+					if (end == -1) {
+					end = dc.length;
+				  }
+				}
+
+				return decodeURI(dc.substring(begin + prefix.length, end));
+			}
+
+			var url_string = window.location.href;
+			var url = new URL(url_string);
+			var theCookie = "masternode=" + url.searchParams.get("masternode");
+
+			if (url.searchParams.get("masternode") !== null) {
+			  var toSet = "masternode=" + url.searchParams.get("masternode");
+			  document.cookie=theCookie;
+			} else {
+
+			  var refCookie = getCookie("masternode");
+
+			  if (refCookie === null) {
+				console.log("Ref cookie was null. Setting to default.");
+				document.cookie = "masternode=TRC1hwc1JaBL9kGp6wFYYCXUF4FVinpqbV";
+			  } else {
+				// do nothing if the cookie is already set and there is no new mnode link
+			  }
+			}
+		</script>
+	</body>
+</html>
