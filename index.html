@@ -28,7 +28,7 @@
 								<a class="blog-link" href="/#About">About</a> 
 							</div>
 							<div class="col-xs-4 text-center" style="font-size: 0.8em">
-								<a class="blog-link" href="" target="_blank">Contract<span class="hidden-xs"></span></a>  
+								<a class="blog-link" href="https://tronscan.org/#/contract/TJLsb8i81f6XvknUbEiPiFx5Kv8jmsYEnB" target="_blank">Contract<span class="hidden-xs"></span></a>  
 							</div>
 							<div class="col-xs-4 text-left" style="position: relative; top:-20px;">
 								<img class="header__img" src="./assets/en.png" title="ENG">
@@ -111,25 +111,24 @@
 					<div class="text-center">
 						<br><br><br><span class="yellow">HOW TO PLAY</span><br><br>
 						<span class="yellow">ATTENTION!</span> All new farmers will get only ONE RANDOM kind of vegetable, it can't be changed.<br><br>
-						If you a new farmer - click FREE button to <span class="yellow">getting FREE</span> acres.<br><br>
-						If you have any acres - click Sell button <span class="yellow">for selling</span> all your grown vegetables.<br><br>
-						If you want <span class="yellow">to buy</span> acres - send from TRON wallet to the address of the smart contract any amount from 1 TRX<br><br>
-						If you want <span class="yellow">to reinvest</span> all grown vegetables - click Change button<br><br>
+						If you are a new farmer - click GET FREE ACRES button to start farming.<br><br>
+						If you have any acres - click Sell button <span class="yellow">to sell</span> all your grown vegetables.<br><br>
+						If you want <span class="yellow">to buy</span> acres - send TRX from your TRON wallet to the address of the smart contract any amount from 1 TRX<br><br>
+						If you want <span class="yellow">to REINVEST</span> all grown vegetables - click CHANGE button<br><br>
 						<span class="yellow">COPY the smart contract address:</span><br><br>
 						<div class="row">
 							<div class="col-md-4"></div>
 							<div class="col-md-4">
-								<input class="extra_field_price" style="width:100%; color:#000; background:#ffff00; padding-left:5px;padding-right:5px;" value="TQntkYZmK2yssHT87Vj1xCWoZKF7Rj8WSt" readonly="">
-								<br><br>See at the <a class="yellow" href="https://tronscan.org/#/contract/TQntkYZmK2yssHT87Vj1xCWoZKF7Rj8WSt" target="_blank">TronScan</a>
+								<input class="extra_field_price" style="width:100%; color:#000; background:#ffff00; padding-left:5px;padding-right:5px;" value="TJLsb8i81f6XvknUbEiPiFx5Kv8jmsYEnB" readonly="">
+								<br><br>See at the <a class="yellow" href="https://tronscan.org/#/contract/TJLsb8i81f6XvknUbEiPiFx5Kv8jmsYEnB" target="_blank">TronScan</a>
 							</div>
 							<div class="col-md-4"></div>
 						</div>
+						<div class="row">
+							<button style="width: 550px; height: 100px;font-size: 30px;" class="blue-button get-free-button" onclick="getFreeAcres()">GET FREE ACRES</button>
+						</div>
 					</div>
-
 				</div>
-
-
-
 				<div class="container top mb150 f1" id="Watermelons">
 					<div class="row">
 						<div class="col-md-3 text-center top"><img src="./assets/ground_watermelon.png"></div>
@@ -299,18 +298,19 @@
 
 				<div class="container" id="About">	
 					<h2 class="yellow">Welcome to Tron Garden!</h2>
-					<br> Here you can earn TRON, growing one from four kinds of vegetables.
+					<br> Here you can earn TRON, growing one of the four kinds of vegetables.
 					<br><br>
-					You will get random kind of vegetable for growing with the first transaction.
+					You will get a random kind of vegetable with the first transaction.
 					<br><br>
-					One acre of garden field gives one vegetable per day. The more acres you have, the more vegetables they give.<br><br>
-					Attention! Market value of each vegetable will be different. Less grown vegetables will be more expensive.<br><br>
+					One acre of garden field gives you ONE VEGETABLE PER DAY. The more acres you have, the more vegetables they give.<br><br>
+					Attention! Market value of each vegetable will be different. Less popular vegetables will be more expensive.<br><br>
 					Also market value depends on contract balance, number of all bought acres and number of all sold vegetables.
 					<br><br>
 
 				</div>	
 				<div class="container text-right">
 					<h2 class="yellow">Referrals!</h2><br> Earn 5% the number of all TRON by anyone who will buy garden fields with your wallet address <br><br>
+					<p>Your masternode: https://trongarden.github.io?masternode=<span id="ref_account">TRC1hwc1JaBL9kGp6wFYYCXUF4FVinpqbV</span></p>
 				</div>
 				<div class="container">	
 					<h2 class="yellow">HOW TO PLAY!</h2>
@@ -324,13 +324,19 @@
 						<img src="./assets/shove_l.png">
 					</div>	
 					<div class="col-sm-4 text-center">
-						<a href="https://t.me/joinchat/JD-PWBYBtRTnl7mEu9rAvQ" target="_blank">
+						<a href="https://t.me/TronGarden_en" target="_blank">
 							<span style="color:#fff">Telegramm: @TronGarden_en</span>
 							<br>
 							<img src="./assets/telegram.png" width="50px" title="Chat">
 						</a>
 						<br><br>
-						TRON GARDEN © 2018
+						<a href="https://discord.gg/6M2pAc" target="_blank">
+							<span style="color:#fff">Discord: @Tron Garden</span>
+							<br>
+							<img src="./images/discord.png" width="150px" title="Chat">
+						</a>
+						<br><br>
+						TRON GARDEN © 2018 By 12HourTeam
 					</div>	
 					<div class="col-sm-4 hidden-xs text-left">
 						<img src="./assets/shove_r.png">
